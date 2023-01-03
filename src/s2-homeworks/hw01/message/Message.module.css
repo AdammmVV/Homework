@@ -1,17 +1,21 @@
 .message {
-
+    padding: 24px 70px 47px;
+    display: grid;
+    grid-template-areas:
+        'n n i' 't t i' 't t d';
 }
 
 .imageAndText {
-
+    grid-area: i;
 }
 
 .imageAndText img {
+    width: 48px;
 
 }
 
 .text {
-
+    grid-area: t;
 }
 
 .text:after {
@@ -19,13 +23,20 @@
 }
 
 .name {
-
+    grid-area: n;
+    font-weight: 600;
+    font-size: 18px;
+    background-color: #0059b3;
 }
 
 .messageText {
-
+    grid-area: m;
+    font-size: 16px;
+    background-color: #0059b3;
 }
 
 .time {
-
+    grid-area: d;
+    font-size: 10px;
+    font-weight: 600;
 }
