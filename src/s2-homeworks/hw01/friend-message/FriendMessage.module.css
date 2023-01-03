@@ -1,17 +1,21 @@
 .friendMessage {
-
+    padding: 24px 70px 47px;
+    display: grid;
+    grid-template-areas:
+        'i n'
+        'd t';
 }
 
 .friendImageAndText {
-
+    grid-area: i;
 }
 
 .friendImageAndText img {
-
+    width: 48px;
 }
 
 .friendText {
-
+    grid-area: t;
 }
 
 .friendText:after {
@@ -19,13 +23,21 @@
 }
 
 .friendName {
-
+    grid-area: n;
+    font-weight: 600;
+    font-size: 18px;
+    background-color: #F5F7FB;
+;
 }
 
 .friendMessageText {
-
+    grid-area: m;
+    font-size: 16px;
+    background-color: #F5F7FB;
 }
 
 .friendTime {
-
+    grid-area: d;
+    font-size: 10px;
+    font-weight: 600;
 }
