@@ -15,24 +15,43 @@
 }
 
 .text {
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #FFFFFF;
     grid-area: t;
+    background-color: #0066CC;
+    max-width: 600px;
+    border-radius: 20px;
+    text-align: right;
+    position: relative;
+    z-index: 15;
 }
-
 .text:after {
-
+    content: ' ';
+    border-left: 55px solid transparent;
+    border-right: 55px solid transparent;
+    border-bottom: 45px solid #0066CC;
+    position: absolute;
+    bottom: 0;
+    right: -15px;
+    z-index: -10;
 }
+
 
 .name {
+    padding: 7px 25px 3px 25px;
     grid-area: n;
     font-weight: 600;
     font-size: 18px;
-    background-color: #0059b3;
 }
 
 .messageText {
+    padding: 0 25px 8px 25px;
     grid-area: m;
     font-size: 16px;
-    background-color: #0059b3;
 }
 
 .time {
