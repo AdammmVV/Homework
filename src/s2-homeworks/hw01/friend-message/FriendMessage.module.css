@@ -16,24 +16,42 @@
 
 .friendText {
     grid-area: t;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #000000;
+    background-color: #F5F7FB;
+    max-width: 600px;
+    border-radius: 20px;
+    position: relative;
+    z-index: 15;
 }
 
-.friendText:after {
-
+.friendText:before {
+    content: ' ';
+    border-left: 55px solid transparent;
+    border-right: 55px solid transparent;
+    border-bottom: 45px solid #F5F7FB;
+    position: absolute;
+    bottom: 0;
+    left: -15px;
+    z-index: -10;
 }
 
 .friendName {
     grid-area: n;
+    padding: 7px 25px 3px 25px;
     font-weight: 600;
     font-size: 18px;
-    background-color: #F5F7FB;
-;
+
 }
 
 .friendMessageText {
     grid-area: m;
+    padding: 0 25px 8px 25px;
     font-size: 16px;
-    background-color: #F5F7FB;
 }
 
 .friendTime {
