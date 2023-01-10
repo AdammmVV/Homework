@@ -1,27 +1,28 @@
 .message {
-    padding: 24px 70px 47px;
-    display: grid;
-    grid-template-areas:
-        'n n i' 't t i' 't t d';
+    margin-top: 20px;
 }
 
 .imageAndText {
-    grid-area: i;
+    display: grid;
+    grid-template-areas: 'text img';
+    justify-content: end;
+    gap: 15px;
 }
 
 .imageAndText img {
     width: 48px;
+    grid-area: img;
 
 }
 
 .text {
+    grid-area: text;
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 20px;
     color: #FFFFFF;
-    grid-area: t;
     background-color: #0066CC;
     max-width: 600px;
     border-radius: 20px;
@@ -43,19 +44,18 @@
 
 .name {
     padding: 7px 25px 3px 25px;
-    grid-area: n;
     font-weight: 600;
     font-size: 18px;
 }
 
 .messageText {
     padding: 0 25px 8px 25px;
-    grid-area: m;
     font-size: 16px;
 }
 
 .time {
-    grid-area: d;
     font-size: 10px;
     font-weight: 600;
+    text-align: end;
+    padding-right: 10px;
 }
