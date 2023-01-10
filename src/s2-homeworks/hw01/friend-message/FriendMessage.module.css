@@ -1,21 +1,22 @@
 .friendMessage {
-    padding: 24px 70px 47px;
-    display: grid;
-    grid-template-areas:
-        'i n'
-        'd t';
+    margin-top: 20px;
 }
 
 .friendImageAndText {
-    grid-area: i;
+    display: grid;
+    grid-template-areas: 'img text';
+    justify-content: start;
+    gap: 15px;
 }
 
 .friendImageAndText img {
     width: 48px;
+    grid-area: img;
+
 }
 
 .friendText {
-    grid-area: t;
+    grid-area: text;
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: 400;
@@ -41,21 +42,17 @@
 }
 
 .friendName {
-    grid-area: n;
     padding: 7px 25px 3px 25px;
     font-weight: 600;
     font-size: 18px;
-
 }
 
 .friendMessageText {
-    grid-area: m;
     padding: 0 25px 8px 25px;
     font-size: 16px;
 }
 
 .friendTime {
-    grid-area: d;
     font-size: 10px;
     font-weight: 600;
 }
