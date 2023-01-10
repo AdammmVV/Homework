@@ -10,7 +10,7 @@ import s2 from '../../s1-main/App.module.css'
 * 5 - указать нужный тип в useState с affairs                                       !
 * 6 - дописать тип и логику функции deleteAffairCallback                            !!!!
 * 7 - в файле Affairs.tsx дописать типизацию пропсов                                !
-* 8 - в файле Affairs.tsx дописать логику функций setAll, setHigh, setMiddle, setLow
+* 8 - в файле Affairs.tsx дописать логику функций setAll, setHigh, setMiddle, setLow!
 * 9 - в файле Affair.tsx дописать типизацию пропсов
 * 10 - в файле Affair.tsx дописать функции deleteCallback и использовать
 * 11 - в файле Affair.tsx отобразить приходящие данные
@@ -57,9 +57,8 @@ export const filterAffairs = (affairs: AffairType[], filter: FilterType): Affair
     }
     return affairs
 }
-export const deleteAffair = (affairs: any, _id: any): any => { // need to fix any
-
-    return affairs // need to fix
+export const deleteAffair = (affairs: AffairType[], _id: number): AffairType[] => {
+    return defaultAffairs.filter(af => af._id !== _id)
 }
 
 function HW2() {
@@ -68,7 +67,7 @@ function HW2() {
 
     const filteredAffairs = filterAffairs(affairs, filter)
     const deleteAffairCallback = (_id: number) => {
-        setAffairs(affairs.filter(af => af._id === _id))
+        setAffairs(deleteAffair(affairs, _id))
     }
     return (
         <div id={'hw2'}>
