@@ -1,4 +1,5 @@
 .App {
+    font-family: 'Montserrat', sans-serif;
     --header_height: 60px;
     display: flex;
     flex-direction: column;
