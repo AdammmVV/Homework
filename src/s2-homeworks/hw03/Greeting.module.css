@@ -2,34 +2,70 @@
 }
 
 .inputAndButtonContainer {
+    display: grid;
+    grid-template-areas: 'i b';
+    justify-content: start;
+    gap: 12px;
 }
 
 .error {
+    margin: 7px 0 7px 0;
+    color: #CC0000;
+    font-size: 14px;
 }
 
 .input {
+    padding: 8px 0 8px 12px;
+    grid-area: i;
+    box-sizing: border-box;
+    border: 1px solid #D1D1D1;
+    width: 372px;
+    height: 36px;
+    border-radius: 5px;
+    font-size: 16px;
+    line-height: 20px;
 }
 
 .input:focus {
 }
 
 .errorInput {
+    border: 1px solid #CC0000;
 }
 
 .button {
+    grid-area: b;
+    border: none;
+    height: 36px;
+    width: 78px;
+    border-radius: 3px;
+    background: #0066CC;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    color: #FFFFFF;
+    text-align: center;
 }
 
 .button:focus {
 }
 
 .button:active {
+    border: 1px solid #d9d9d9;
 }
 
 .button:disabled {
+    opacity: 0.5;
 }
 
 .text {
+    font-size: 14px;
+    line-height: 17px;
+    color: rgba(0, 0, 0, 0.5);
+    padding-bottom: 7px;
 }
 
 .greeting {
+    font-weight: 500;
+    font-size: 14px;
 }
