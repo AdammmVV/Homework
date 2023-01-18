@@ -8,7 +8,7 @@ type GreetingContainerPropsType = {
 }
 
 export const pureAddUser = (name: string, setError: (value: string)=>void, setName: (value: string)=>void, addUserCallback: (name: string)=> void) => {
-    if(!(/\w/g.test(name))) {
+    if(!(/\S/g.test(name))) {
         pureOnBlur(name, setError)
     } else {
         addUserCallback(name)
@@ -18,14 +18,11 @@ export const pureAddUser = (name: string, setError: (value: string)=>void, setNa
 }
 
 export const pureOnBlur = (name: string, setError: (value: string) => void) => { // если имя пустое - показать ошибку
-    console.log(/\w/g.test(name))
-    if(!(/\w/g.test(name))) setError("Ошибка! Введите имя!")
+    !/\S/g.test(name) && setError("Ошибка! Введите имя!")
 }
 
 export const pureOnEnter = (e: KeyboardEvent<HTMLInputElement>, addUser: ()=> void) => { // если нажата кнопка Enter - добавить
-    if(e.key === 'Enter') {
-        addUser()
-    }
+    e.key === 'Enter' && addUser()
 }
 
 // более простой и понятный для новичков
