@@ -1,5 +1,5 @@
 import React from 'react'
-import {Route, Routes} from 'react-router-dom'
+import {Route, Routes, Navigate} from 'react-router-dom'
 import Error404 from './pages/Error404'
 import PreJunior from './pages/PreJunior'
 import Junior from './pages/Junior'
@@ -15,7 +15,7 @@ function Pages() {
     return (
         <div>
             <Routes>
-                <Route path={'/'} element={<PreJunior/>}/>
+                <Route path={'/'} element={<Navigate to={'/pre-junior'}/>}/>
                 <Route path={'/pre-junior'} element={<PreJunior/>}/>
                 <Route path={'/junior'} element={<Junior/>}/>
                 <Route path={'/junior-plus'} element={<JuniorPlus/>}/>
