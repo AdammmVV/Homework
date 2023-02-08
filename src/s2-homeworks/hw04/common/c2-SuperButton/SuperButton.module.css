@@ -35,14 +35,10 @@
 }
 
 .default:hover {
-    width: 167px;
-    height: 30px;
     background: #0080FF;
 }
 
 .red:hover {
-    width: 167px;
-    height: 30px;
     background: #FF1A47;
 }
 
