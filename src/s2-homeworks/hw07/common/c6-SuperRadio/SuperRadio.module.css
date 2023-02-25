@@ -36,7 +36,6 @@
     border-radius: 50%;
     background-color: black;
     transform: translate(-50%, -50%);
-    visibility: visible;
     cursor: pointer;
 }
 
