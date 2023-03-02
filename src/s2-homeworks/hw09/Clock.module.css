@@ -1,14 +1,31 @@
 .buttonsContainer {
+    display: flex;
+    gap: 21px;
+    margin-top: 27px;
+}
+
+.superButton {
+    width: 84px;
+    color: white;
 }
 
 .clock {
 }
 
 .watch {
+    display: inline-block;
+    font-size: 20px;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
 }
 
 .watch strong {
+    letter-spacing: normal;
+    font-weight: 600;
 }
 
 .more {
+    display: flex;
+    font-size: 16px;
+    opacity: 0.5;
 }
