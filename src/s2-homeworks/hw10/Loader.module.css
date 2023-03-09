@@ -1,3 +1,37 @@
 .loader {
-    /*свг и/или анимация*/
+    background: conic-gradient(from 90deg at 50% 50%, rgba(255, 255, 255, 0) 0deg, #512DE4 360deg);
+    position: relative;
+    border-radius: 50%;
+    animation: spin 3s linear infinite;
+    width: 90px;
+    height: 90px;
+    display: inline-block;
 }
+
+@keyframes spin {
+    0% {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}
+}
+
+.loader:after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    background-color: #512DE4;
+    top: 45%;
+    right: 0;
+    width: 10px;
+    height: 10px;
+}
+
+.loader:before {
+    content: '';
+    position: absolute;
+    width: 71px;
+    height: 71px;
+    background-color: white;
+    border-radius: 50%;
+    top: 10%;
+    left: 10%;
+}
+
